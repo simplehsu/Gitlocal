@@ -31,7 +31,7 @@ printf "\r\nYUBIHSM2 Provision\n"
 #--audit_key_password="$AUDIT_KEY_PASSWORD" \
 #--linux=1 2>&1) | tee $LOG_PATH_PROVISION/log-ca-18952102-$NOW-provision.log
 
-cat /home/mt/mt/src/embedded/ca-18952102/tmp/fake_provision_output.txt
+cat /home/mt/mt/src/embedded/$WORK_DIR/tmp/fake_provision_output.txt
 
 set +e
 

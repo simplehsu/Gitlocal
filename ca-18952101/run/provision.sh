@@ -19,17 +19,19 @@ set -e
 
 printf "YUBIHSM2 Provision\n"
 
-(sudo python $SCRIPT --com_port $UART --baud 115200 \
---ca_key_id="$CA_KEY_ID" \
---ca_common_name="$CA_COMMON_NAME" \
---ca_data_directory="$YUBIHSM2_CONF_DIR/ca" \
---audit_key_id="$AUDIT_KEY_ID" \
---audit_data_directory="$YUBIHSM2_CONF_DIR/audit" \
---openssl_conf="$YUBIHSM2_CONF_DIR/etc/tls-ca.conf" \
---connector_url="http://127.0.0.1:12345/api" \
---device_data_directory="$YUBIHSM2_CONF_DIR/device" \
---audit_key_password="$AUDIT_KEY_PASSWORD" \
---linux=1 2>&1) | tee $LOG_PATH_PROVISION/log-ca-18952101-$NOW-provision.log
+#(sudo python $SCRIPT --com_port $UART --baud 115200 \
+#--ca_key_id="$CA_KEY_ID" \
+#--ca_common_name="$CA_COMMON_NAME" \
+#--ca_data_directory="$YUBIHSM2_CONF_DIR/ca" \
+#--audit_key_id="$AUDIT_KEY_ID" \
+#--audit_data_directory="$YUBIHSM2_CONF_DIR/audit" \
+#--openssl_conf="$YUBIHSM2_CONF_DIR/etc/tls-ca.conf" \
+#--connector_url="http://127.0.0.1:12345/api" \
+#--device_data_directory="$YUBIHSM2_CONF_DIR/device" \
+#--audit_key_password="$AUDIT_KEY_PASSWORD" \
+#--linux=1 2>&1) | tee $LOG_PATH_PROVISION/log-ca-18952101-$NOW-provision.log
+
+cat /home/mt/mt/src/embedded/$WORK_DIR/tmp/fake_provision_output.txt
 
 set +e
 
