@@ -1,0 +1,16 @@
+YUBIHSM2 Provision
+engine "pkcs11" set.
+Signature ok
+subject=CN = A14-M3F-QUC
+Getting CA Private Key
+{
+	"PROVISION": {
+		"CMD": "PRINT_CERT_SERIAL",
+		"MSG": {
+			"IDENTIFIER": "ACCA11AC010001",
+			"CERT_SERIAL": "2078daa7255a309e621178479f8dd01fbdf0c5c0"
+		},
+		"RESULT": "PASS",
+		"ERRNO": "0"
+	}
+}
