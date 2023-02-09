@@ -2,9 +2,9 @@
 set -e -o pipefail
 set -x
 
-PLATFORM=ubuntu2004
+PLATFORM=ubuntu2204
 
-YUBIHSMSDK_VERSION="2021-12" # To download the latest released version of yubihsm-shell
+YUBIHSMSDK_VERSION="2022-06" # To download the latest released version of yubihsm-shell
 export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update && sudo  apt-get dist-upgrade -y
