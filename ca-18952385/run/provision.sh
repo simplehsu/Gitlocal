@@ -18,7 +18,7 @@ set -e
 --baud=$BAUDRATE \
 --com_port="$UART" \
 --connector_url="http://127.0.0.1:12345" \
- 2>&1) | tee $LOG_PATH_PROVISION/log-ca-18952385-$NOW-provision.log
+ 2>&1) | tee $LOG_PATH_PROVISION/log-$WORK_DIR-$NOW-provision.log
 
 set +e
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+HSM_SERIAL=102
 UART=/dev/ttyUSB0
 #UART=/dev/ttyACM0
 BAUDRATE=115200
@@ -13,7 +14,8 @@ NOW=$(date +"%F-%H-%M-%S")
 
 set -e
 
-(sudo $SCRIPT --baud=$BAUDRATE \
+(sudo $SCRIPT --hsm_serial=$HSM_SERIAL \
+--baud=$BAUDRATE \
 --com_port="$UART" \
 --connector_url="http://127.0.0.1:12345" \
  2>&1) | tee $LOG_PATH_PROVISION/log-$WORK_DIR-$NOW-provision.log
