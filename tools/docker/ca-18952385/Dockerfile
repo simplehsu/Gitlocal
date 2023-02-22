@@ -1,4 +1,4 @@
-ARG UBUNTU_VERSION=20.04
+ARG UBUNTU_VERSION=22.04
 FROM ubuntu:$UBUNTU_VERSION
 
 # https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
@@ -32,18 +32,25 @@ ADD utils/yubihsm-setup /shared
 RUN sudo bash -xc /shared/resources/release/build-pkg.sh
 
 # install PYTHON3, PIP
+# RUN sudo add-apt-repository ppa:deadsnakes/ppa
 RUN sudo apt-get install -y \
-    python3 \
+    python3.11 \
     python3-pip
 
 RUN sudo pip install --upgrade pip
+RUN sudo pip install pyserial
 
 # Setup ca_18952385 configuration
 ADD utils/cert_signer/ca_18952385 /root/cert_signer/ca_18952385
 ADD utils/cert_signer/ca_18952385 /home/mt/cert_signer/ca_18952385
 
-RUN sudo ln -s /usr/bin/python3.8 /usr/local/bin/python
+RUN sudo ln -s /usr/bin/python3.11 /usr/local/bin/python
 RUN python --version && pip --version
+
+# Correct the pkcs lib path
+#RUN sudo mkdir /usr/lib/x86_64-linux-gnu/engines-1.1/
+#RUN sudo ln -s /usr/lib/x86_64-linux-gnu/engines-3/pkcs11.so /usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so
+#RUN sudo ln -s /usr/lib/x86_64-linux-gnu/engines-3/pkcs11.la /usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.la
 
 # OTHER
 RUN sudo apt-get update
