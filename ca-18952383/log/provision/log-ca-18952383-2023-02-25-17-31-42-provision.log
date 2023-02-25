@@ -1,0 +1,10 @@
+{
+    "PROVISION_CERTS": {
+        "CMD": "INIT",
+        "MSG": {
+            "ERR": "Openssl Config file not found at /root/cert_signer/ca_18952383/etc/openssl.conf"
+        },
+        "RESULT": "FAIL",
+        "ERRNO": 2
+    }
+}

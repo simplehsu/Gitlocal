@@ -1,0 +1,5 @@
+time="2023-02-25T17:33:36+08:00" level=debug msg="preflight complete" cert= config= key= pid=17 seccomp=false serial= syslog=false timeout=0s version=3.0.3
+time="2023-02-25T17:33:36+08:00" level=debug msg=takeoff TLS=false listen="localhost:12345" pid=17
+time="2023-02-25T17:33:37+08:00" level=debug msg="usb context not yet open" Correlation-ID=5d51405c-4215-49d4-94e5-151e620cfa96
+time="2023-02-25T17:33:37+08:00" level=error msg="failed usb proxy" X-Request-ID=5d51405c-4215-49d4-94e5-151e620cfa96 error="device not found"
+time="2023-02-25T17:33:37+08:00" level=error msg="error in handling request" Content-Length=3 Content-Type=application/octet-stream Method=POST RemoteAddr="127.0.0.1:59534" StatusCode=500 URI=/connector/api User-Agent=python-requests/2.28.1 X-Real-IP=127.0.0.1 X-Request-ID=5d51405c-4215-49d4-94e5-151e620cfa96 latency=1.146229ms

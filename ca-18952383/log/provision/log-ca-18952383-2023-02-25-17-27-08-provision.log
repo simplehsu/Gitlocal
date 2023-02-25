@@ -1,0 +1,10 @@
+{
+    "PROVISION_CERTS": {
+        "CMD": "INIT",
+        "MSG": {
+            "ERR": "Client extensions file client_ext not found in /root/cert_signer/ca_18952383/ca"
+        },
+        "RESULT": "FAIL",
+        "ERRNO": 2
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "PROVISION_CERTS": {
+        "CMD": "INIT",
+        "MSG": {
+            "ERR": "CA cert not found at /root/cert_signer/ca_18952383/ca/18952383.crt"
+        },
+        "RESULT": "FAIL",
+        "ERRNO": 2
+    }
+}

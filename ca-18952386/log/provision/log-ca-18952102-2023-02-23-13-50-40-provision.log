@@ -1,0 +1,11 @@
+{
+    "PROVISION": {
+        "CMD": "PROVISION_DEVICE",
+        "MSG": {
+            "IDENTIFIER": "ACEA11AC010001",
+            "TOOL_VERSION": "3006"
+        },
+        "RESULT": "PASS",
+        "ERRNO": "0"
+    }
+}

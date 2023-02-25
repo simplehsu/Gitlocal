@@ -1,0 +1,10 @@
+{
+    "PROVISION_CERTS": {
+        "CMD": "INIT",
+        "MSG": {
+            "ERR": "Device data temporary directory /root/cert_signer/ca_18952383/device does not exist."
+        },
+        "RESULT": "FAIL",
+        "ERRNO": 2
+    }
+}
