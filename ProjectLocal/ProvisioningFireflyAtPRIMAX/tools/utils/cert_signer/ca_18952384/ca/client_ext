@@ -1,0 +1,5 @@
+keyUsage                = critical,digitalSignature
+basicConstraints        = CA:false
+extendedKeyUsage        = clientAuth
+subjectKeyIdentifier    = hash
+# authorityKeyIdentifier  = keyid:always
